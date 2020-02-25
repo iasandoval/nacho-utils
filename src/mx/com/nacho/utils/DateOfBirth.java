@@ -3,6 +3,7 @@ package mx.com.nacho.utils;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 
 /**
@@ -15,30 +16,34 @@ public class DateOfBirth {
     /**
      * Date object to store the Date of Birth.
      */
-    private Date dob;
+    private LocalDate dob;
 
     public DateOfBirth() {
-        this.dob = new Date();
+        this.dob = LocalDate.now();
+    }
+
+    public DateOfBirth(int year, int month, int day) {
+        this.dob = LocalDate.of(year, month, day);
     }
 
     public DateOfBirth(Date dob) {
-        this.dob = dob;
+        this.dob = dob.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
     public DateOfBirth(Timestamp dob) {
-        this.dob = new Date(dob.getTime());
+        this.dob = dob.toLocalDateTime().toLocalDate();
     }
 
     public Date getDate() {
-        return this.dob;
+        return Date.from(this.dob.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
     public Timestamp getTimestamp() {
-        return new Timestamp(this.dob.getTime());
+        return Timestamp.from(this.dob.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
     public LocalDate getLocalDate() {
-        return new java.sql.Date(this.dob.getTime()).toLocalDate();
+        return this.dob;
     }
 
     public int getAge() {
@@ -88,5 +93,24 @@ public class DateOfBirth {
 
         return "NA";
     }
+
+    @Override
+    public String toString() {
+        return "DateOfBirth{" +
+                "\ndob=" + this.dob +
+                "\nage=" + this.getAge() +
+                "\nisNewborn=" + this.isNewborn() +
+                "\nisChild=" + this.isChild() +
+                "\nisTeen=" + this.isTeen() +
+                "\nisAdult=" + this.isAdult() +
+                "\nisSenior=" + this.isSenior() +
+                "\ncategory=" + this.getCategory() +
+                "\nageRange=" + this.getAgeRange() +
+                "\ndate=" + this.getDate() +
+                "\ntimestamp=" + this.getTimestamp() +
+                "\n}";
+    }
+
+
 
 }
