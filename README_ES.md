@@ -17,7 +17,7 @@ Esta es la primera utileria agregada al repositorio.
 Su funcion es la extraer "meta datos" de la fecha de nacimiento.
 
 * [Ver código fuente](src/main/mx/com/nacho/utils/DateOfBirth.java).
-* [Ver javadoc](docs/mx/com/nacho/utils/DateOfBirth.html).
+* [Ver javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/DateOfBirth.html).
 
 **Ejemplo:**
 ```java

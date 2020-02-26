@@ -16,7 +16,7 @@ This is the first utility commited to the repository.
 Its function is to extract "meta data" form the Date of Birth.
  
 * [See source code](src/main/mx/com/nacho/utils/DateOfBirth.java).
-* [See javadoc](docs/mx/com/nacho/utils/DateOfBirth.html).
+* [See javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/DateOfBirth.html).
 
  
  **Example:**
