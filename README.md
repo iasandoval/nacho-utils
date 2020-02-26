@@ -4,7 +4,41 @@
 
 ## About
 
-The idea of this project, is to publish some of the utility classes developed
- thought my professional career.
+The idea of this repository, is to publish utilitues (Java) 
+that I have used in real projects, hopping will be "util" for you xD.
+
+I will be updating this project from time to time.
  
- I will be updating this project in my free time.
+## Utilities
+ 
+### Date of Birth
+This is the first utility commited to the repository.
+Its function is to extract "meta data" form the Date of Birth.
+ 
+* [See source code](src/main/mx/com/nacho/utils/DateOfBirth.java).
+* [See javadoc](javadoc/mx/com/nacho/utils/DateOfBirth.html).
+
+ 
+ **Example:**
+ ```java
+     DateOfBirth dob = new DateOfBirth(1983, 3, 3);
+     System.out.println(dob.toString());
+ ``` 
+ 
+ **Result:**
+ ```
+     DateOfBirth{
+         dob=1983-03-03
+         age=36
+         isNewborn=false
+         isChild=false
+         isTeen=false
+         isAdult=true
+         isSenior=false
+         category=ADULT
+         ageRange=18+
+         date=Thu Mar 03 00:00:00 EST 1983
+         timestamp=1983-03-03 00:00:00.0
+     }
+ ```
+ 

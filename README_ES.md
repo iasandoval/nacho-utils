@@ -4,8 +4,41 @@
 
 ## Acerca de
 
-La idea de este proyecto, es el de publicar las utilerias desarroladas 
-a lo largo de mi carrera profesional.
+La idea de este repositorio, es la de publicar utilerias (Java) 
+que he aplicado en proyectos reales, esperando que les 
+puedan ser de "utilidad" xD.
 
-Ire actualizando este proyecto en mi tiempo libre.
+Ire actualizando este proyecto poco a poco en mi tiempo libre.
+
+## Utilerias
+
+### Date of Birth
+Esta es la primera utileria agregada al repositorio. 
+Su funcion es la extraer "meta datos" de la fecha de nacimiento.
+
+* [Ver código fuente](src/main/mx/com/nacho/utils/DateOfBirth.java).
+* [Ver javadoc](javadoc/mx/com/nacho/utils/DateOfBirth.html).
+
+**Ejemplo:**
+```java
+    DateOfBirth dob = new DateOfBirth(1983, 3, 3);
+    System.out.println(dob.toString());
+``` 
+
+**Resultando en:**
+```
+    DateOfBirth{
+        dob=1983-03-03
+        age=36
+        isNewborn=false
+        isChild=false
+        isTeen=false
+        isAdult=true
+        isSenior=false
+        category=ADULT
+        ageRange=18+
+        date=Thu Mar 03 00:00:00 EST 1983
+        timestamp=1983-03-03 00:00:00.0
+    }
+```
 
