@@ -15,7 +15,7 @@ I will be updating this project from time to time.
 This is the first utility committed to the repository.
 Its function is to extract "meta data" from the Date of Birth.
  
-* [See source code](src/main/mx/com/nacho/utils/DateOfBirth.java).
+* [See Source Code](src/main/mx/com/nacho/utils/DateOfBirth.java).
 * [See javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/DateOfBirth.html).
 
  
@@ -48,3 +48,30 @@ Its function is to extract "meta data" from the Date of Birth.
      }
  ```
  
+### Social Security number
+This is the second utility committed to the repository. 
+Its functions is to validate and format a US Social Security number (SSN).
+
+The validate method is using the regular expression explained in the article
+["Validating Social Security Numbers through Regular Expressions"](http://rion.io/2013/09/10/validating-social-security-numbers-through-regular-expressions-2/) by Rion Williams.
+
+* [See Source Code](src/main/mx/com/nacho/utils/SocialSecurityNumber.java).
+* [See javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/SocialSecurityNumber.html).
+
+
+**Example:**
+```java
+    SocialSecurityNumber ssn = new SocialSecurityNumber(52063811);
+    System.out.println(ssn.toString());
+```
+**Result:**
+```
+    SocialSecurityNumber{
+        ssn=52063811
+        isValid=true
+        rawSSN=52063811
+        stringSSN=052063811
+        formattedSSN=052-06-3811
+        maskedSSN=XXX-XX-3811
+    }
+```
