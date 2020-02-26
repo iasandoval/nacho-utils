@@ -4,7 +4,7 @@
 
 ## About
 
-The idea of this repository, is to publish utilitues (Java) 
+The idea of this repository, is to publish utilities (Java) 
 that I have used in real projects, hopping will be "util" for you xD.
 
 I will be updating this project from time to time.
@@ -12,8 +12,8 @@ I will be updating this project from time to time.
 ## Utilities
  
 ### Date of Birth
-This is the first utility commited to the repository.
-Its function is to extract "meta data" form the Date of Birth.
+This is the first utility committed to the repository.
+Its function is to extract "meta data" from the Date of Birth.
  
 * [See source code](src/main/mx/com/nacho/utils/DateOfBirth.java).
 * [See javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/DateOfBirth.html).

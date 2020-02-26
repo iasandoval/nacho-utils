@@ -4,17 +4,17 @@
 
 ## Acerca de
 
-La idea de este repositorio, es la de publicar utilerias (Java) 
+La idea de este repositorio, es la de publicar utilerías (Java) 
 que he aplicado en proyectos reales, esperando que les 
 puedan ser de "utilidad" xD.
 
-Ire actualizando este proyecto poco a poco en mi tiempo libre.
+Iré actualizando este proyecto poco a poco en mi tiempo libre.
 
-## Utilerias
+## Utilerías
 
 ### Date of Birth
-Esta es la primera utileria agregada al repositorio. 
-Su funcion es la extraer "meta datos" de la fecha de nacimiento.
+Esta es la primera utilería agregada al repositorio. 
+Su función es la extraer "meta datos" de la fecha de nacimiento.
 
 * [Ver código fuente](src/main/mx/com/nacho/utils/DateOfBirth.java).
 * [Ver javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/DateOfBirth.html).
