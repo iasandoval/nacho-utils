@@ -1,10 +1,13 @@
 package mx.com.nacho.utils;
 
 import java.sql.Timestamp;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.format.TextStyle;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Utility class to extract metadata from a Date Of Birth (DOB).
@@ -106,6 +109,36 @@ public class DateOfBirth {
     }
 
     /**
+     * Get the text of the month from the Date of Birth based in the system configuration.
+     * For example, if the system is in Spanish, the month will be displayed in that language.
+     *
+     * @return The text of the month from the Date of Birth (Ex. Saturday/Sábado/etc.)
+     */
+    public String getMonth() {
+        return this.dob.getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault());
+    }
+
+    /**
+     * Get the Day of Week from the Date of Birth based in the system configuration.
+     * For example, if the system is in Spanish, the Date of Week will be displayed in that language.
+     *
+     * @return The text of the month from the Date of Birth (Ex. December/Diciembre/etc.).
+     */
+    public String getDayOfWeek() {
+        return this.dob.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
+    }
+
+    /**
+     * Indicates if the Date of Birth falls in a weekend.
+     *
+     * @return True if the Date of Birth falls in a weekend.
+     */
+    public boolean isWeekend() {
+        DayOfWeek dow = this.dob.getDayOfWeek();
+        return dow.equals(DayOfWeek.SATURDAY) || dow.equals(DayOfWeek.SUNDAY);
+    }
+
+    /**
      * Indicates if the age group belongs to a new born.
      *
      * @return True if the age is less than 1 year old.
@@ -183,17 +216,23 @@ public class DateOfBirth {
     @Override
     public String toString() {
         return "DateOfBirth{" +
-                "\ndob=" + this.dob +
-                "\nage=" + this.getAge() +
-                "\nisNewborn=" + this.isNewborn() +
-                "\nisChild=" + this.isChild() +
-                "\nisTeen=" + this.isTeen() +
-                "\nisAdult=" + this.isAdult() +
-                "\nisSenior=" + this.isSenior() +
-                "\ncategory=" + this.getCategory() +
-                "\nageRange=" + this.getAgeRange() +
-                "\ndate=" + this.getDate() +
-                "\ntimestamp=" + this.getTimestamp() +
+                "\n    dob=" + this.dob +
+                "\n    age=" + this.getAge() +
+                "\n    day=" + this.dob.getDayOfMonth() +
+                "\n    month=" + this.dob.getMonth().getValue() +
+                "\n    year=" + this.dob.getYear() +
+                "\n    monthText=" + this.getMonth() +
+                "\n    dayOfWeek=" + this.getDayOfWeek() +
+                "\n    isWeekend=" + this.isWeekend() +
+                "\n    isNewborn=" + this.isNewborn() +
+                "\n    isChild=" + this.isChild() +
+                "\n    isTeen=" + this.isTeen() +
+                "\n    isAdult=" + this.isAdult() +
+                "\n    isSenior=" + this.isSenior() +
+                "\n    category=" + this.getCategory() +
+                "\n    ageRange=" + this.getAgeRange() +
+                "\n    date=" + this.getDate() +
+                "\n    timestamp=" + this.getTimestamp() +
                 "\n}";
     }
 }

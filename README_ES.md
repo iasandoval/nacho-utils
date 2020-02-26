@@ -21,15 +21,21 @@ Su función es la extraer "meta datos" de la fecha de nacimiento.
 
 **Ejemplo:**
 ```java
-    DateOfBirth dob = new DateOfBirth(1983, 3, 3);
+    DateOfBirth dob = new DateOfBirth(1983, 12, 3);
     System.out.println(dob.toString());
 ``` 
 
 **Resultando en:**
 ```
     DateOfBirth{
-        dob=1983-03-03
+        dob=1983-12-03
         age=36
+        day=3
+        month=12
+        year=1983
+        monthText=December
+        dayOfWeek=Saturday
+        isWeekend=true
         isNewborn=false
         isChild=false
         isTeen=false
@@ -37,8 +43,8 @@ Su función es la extraer "meta datos" de la fecha de nacimiento.
         isSenior=false
         category=ADULT
         ageRange=18+
-        date=Thu Mar 03 00:00:00 EST 1983
-        timestamp=1983-03-03 00:00:00.0
+        date=Sat Dec 03 00:00:00 EST 1983
+        timestamp=1983-12-03 00:00:00.0
     }
 ```
 
