@@ -52,7 +52,7 @@ Its function is to extract "meta data" from the Date of Birth.
 This is the second utility committed to the repository. 
 Its functions is to validate and format a US Social Security number (SSN).
 
-The validate method is using the regular expression explained in the article
+The validate method is using the "Over-The-Top Validation" regular expression explained in the article
 ["Validating Social Security Numbers through Regular Expressions"](http://rion.io/2013/09/10/validating-social-security-numbers-through-regular-expressions-2/) by Rion Williams.
 
 * [See Source Code](src/main/mx/com/nacho/utils/SocialSecurityNumber.java).

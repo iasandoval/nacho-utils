@@ -53,7 +53,7 @@ Segunda utilería agregada al repositorio.
 Su función es la validar y dar formato al número de seguro social de los 
 Estados Unidos ("Social Security Number") o SSN.
 
-El método para validar el SSN utiliza la expresion regular publicada en el artículo
+El método para validar el SSN utiliza la expresion regular "Over-The-Top Validation" publicada en el artículo
 ["Validating Social Security Numbers through Regular Expressions"](http://rion.io/2013/09/10/validating-social-security-numbers-through-regular-expressions-2/) de Rion Williams.
 
 * [Ver código fuente](src/main/mx/com/nacho/utils/SocialSecurityNumber.java).
