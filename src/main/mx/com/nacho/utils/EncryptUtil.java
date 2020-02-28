@@ -113,11 +113,11 @@ public class EncryptUtil {
     /**
      * Method to Encrypt the provided text.
      *
-     * @param value Text to Encrypt.
+     * @param textToEncrypt Text to Encrypt.
      * @return Encrypted String.
      * @throws EncryptUtilException In case of EncryptUtilException.
      */
-    public String encrypt(String value) throws EncryptUtilException {
+    public String encrypt(String textToEncrypt) throws EncryptUtilException {
         try {
             byte[] salt = this.getSalt();
             SecretKey secretKey = this.getSecretKey(salt);
@@ -126,7 +126,7 @@ public class EncryptUtil {
             Cipher cipher = Cipher.getInstance(AES_CBC_PKCS5PADDING);
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivParameter);
 
-            byte[] encrypted = cipher.doFinal(value.getBytes(StandardCharsets.UTF_8));
+            byte[] encrypted = cipher.doFinal(textToEncrypt.getBytes(StandardCharsets.UTF_8));
 
             // Concatenate salt + iv + encrypted
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -146,13 +146,13 @@ public class EncryptUtil {
     /**
      * Method to Decrypt the provided text.
      *
-     * @param encrypted Encrypted text.
+     * @param encryptedText Encrypted text.
      * @return Decrypted String.
      * @throws EncryptUtilException In case of EncryptUtilException.
      */
-    public String decrypt(String encrypted) throws EncryptUtilException {
+    public String decrypt(String encryptedText) throws EncryptUtilException {
         try {
-            byte[] cipherText = Base64.getDecoder().decode(encrypted);
+            byte[] cipherText = Base64.getDecoder().decode(encryptedText);
             byte[] salt = Arrays.copyOfRange(cipherText, 0, BYTE_SIZE_16);
             byte[] ivParameter = Arrays.copyOfRange(cipherText, BYTE_SIZE_16, BYTE_SIZE_16 * 2);
             byte[] cipherTextBytes = Arrays.copyOfRange(cipherText, BYTE_SIZE_16 * 2, cipherText.length);
