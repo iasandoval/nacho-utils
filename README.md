@@ -75,3 +75,37 @@ The validate method is using the "Over-The-Top Validation" regular expression ex
         maskedSSN=XXX-XX-3811
     }
 ```
+
+### EncryptUtil
+
+* [See Source Code](src/main/mx/com/nacho/utils/EncryptUtil.java).
+* [See javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/EncryptUtil.html).
+
+**Example (Tradicional)**
+```java
+    EncryptUtil enc = new EncryptUtil();
+    enc.setKey("secret");
+
+    String encrypted = enc.encrypt("nacho");
+    String decrypted = enc.decrypt(encrypted);
+
+    System.out.println(encrypted);
+    System.out.println(decrypted);
+```
+
+**Example (Chained methods)**
+```java
+    String encrypted = new EncryptUtil("nacho").withKey("secret").encrypt();
+    String decrypted = new EncryptUtil(encrypted).withKey("secret").decrypt();
+
+    System.out.println(encrypted);
+    System.out.println(decrypted);
+```
+
+**Result:**
+
+**Note:** The result may vary, as the method uses "salt" while performing the encrypt. 
+```java
+    +Cytw3P82pOHEShZhQsRy5q8UhH/XKsSYW4fkeYQMRVTbQOVd7gGzNnD1z+P1FiB
+    nacho
+```

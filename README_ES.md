@@ -26,7 +26,7 @@ Su función es la extraer "meta datos" de la fecha de nacimiento.
 ``` 
 
 **Resultando en:**
-```
+```java
     DateOfBirth{
         dob=1983-12-03
         age=36
@@ -75,4 +75,38 @@ El método para validar el SSN utiliza la expresion regular "Over-The-Top Valida
         formattedSSN=052-06-3811
         maskedSSN=XXX-XX-3811
     }
+```
+
+### EncryptUtil
+
+* [Ver código fuente](src/main/mx/com/nacho/utils/EncryptUtil.java).
+* [Ver javadoc](https://iasandoval.github.io/nacho-utils/mx/com/nacho/utils/EncryptUtil.html).
+
+**Ejemplo (Método tradicional)**
+```java
+    EncryptUtil enc = new EncryptUtil();
+    enc.setKey("secret");
+
+    String encrypted = enc.encrypt("nacho");
+    String decrypted = enc.decrypt(encrypted);
+
+    System.out.println(encrypted);
+    System.out.println(decrypted);
+```
+
+**Ejemplo (Chained methods)**
+```java
+    String encrypted = new EncryptUtil("nacho").withKey("secret").encrypt();
+    String decrypted = new EncryptUtil(encrypted).withKey("secret").decrypt();
+
+    System.out.println(encrypted);
+    System.out.println(decrypted);
+```
+
+**Resultando en:**
+
+**Nota:** El texto encriptado varia, ya que se usa "sal" para encriptar. 
+```java
+    +Cytw3P82pOHEShZhQsRy5q8UhH/XKsSYW4fkeYQMRVTbQOVd7gGzNnD1z+P1FiB
+    nacho
 ```
