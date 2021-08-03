@@ -1,4 +1,4 @@
-package mx.com.nacho.utils;
+package com.ignaciosandoval.utils.security;
 
 import javax.crypto.*;
 import javax.crypto.spec.GCMParameterSpec;
@@ -84,6 +84,8 @@ public class EncryptUtil {
 
     /**
      * Default constructor. It will use the provided KEY.
+     *
+     * @param key The Key to Encrypt/Decrypt the data.
      */
     public EncryptUtil(String key) {
         this.key = key;
@@ -210,9 +212,9 @@ public class EncryptUtil {
     }
 
     /**
-     * This method will use the encrypted/decrypted data (bytes[]) to convert it to an String representation.
+     * This method will use the encrypted/decrypted data (bytes[]) to convert it to a String representation.
      * For Encrypted data, will encode the data to Base64.
-     * For Decrypted data, will encode the data in UTF-8..
+     * For Decrypted data, will encode the data in UTF-8.
      *
      * @return A String representation of the encrypted data (bytes[]).
      */

@@ -1,4 +1,4 @@
-package mx.com.nacho.utils;
+package com.ignaciosandoval.utils.ssn;
 
 import java.util.regex.Pattern;
 

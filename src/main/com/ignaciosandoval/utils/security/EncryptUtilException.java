@@ -1,7 +1,8 @@
-package mx.com.nacho.utils;
+package com.ignaciosandoval.utils.security;
 
 /**
  * Wrapper Exception used in the EncryptUtil class.
+ *
  * @author iasandoval
  * @version 1.0
  */

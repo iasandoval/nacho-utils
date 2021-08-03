@@ -1,4 +1,4 @@
-package mx.com.nacho.utils;
+package com.ignaciosandoval.utils.wip;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,92 +1,3 @@
-# Nacho Utils
-
-Read in [English](README.md).
-
-## Acerca de
-
-La idea de este repositorio, es la de publicar utilerías (Java) 
-que he aplicado en proyectos reales, esperando que les 
-puedan ser de "utilidad" xD.
-
-Iré actualizando este proyecto poco a poco en mi tiempo libre.
-
-# Utilerías
-
-## Date Utils
-
-Read in [English](README.md#date-utils).
-
-### Date of Birth
-
-* Versión 1.0
-* Esta es la primera utilería agregada al repositorio. 
-* El objetivo es extraer "meta datos" de la fecha de nacimiento.
-
-* [Ver código fuente](src/main/com/ignaciosandoval/utils/date/DateOfBirth.java).
-* [Ver javadoc](https://iasandoval.github.io/nacho-utils/com/ignaciosandoval/utils/date/DateOfBirth.html).
-
-**Ejemplo:**
-```java
-    DateOfBirth dob = new DateOfBirth(1983, 12, 3);
-    System.out.println(dob.toString());
-``` 
-
-**Resultando en:**
-```java
-    DateOfBirth{
-        dob=1983-12-03
-        age=36
-        day=3
-        month=12
-        year=1983
-        monthText=December
-        dayOfWeek=Saturday
-        isWeekend=true
-        isNewborn=false
-        isChild=false
-        isTeen=false
-        isAdult=true
-        isSenior=false
-        category=ADULT
-        ageRange=18+
-        date=Sat Dec 03 00:00:00 EST 1983
-        timestamp=1983-12-03 00:00:00.0
-    }
-```
-
-## SSN Utils
-
-Read in [English](README.md#ssn-utils).
-
-### Social Security number
-
-* Versión 1.0
-* Su función es la de validar y dar formato al número de seguro social de los Estados Unidos ("Social Security Number") 
-o SSN.
-* El método para validar el SSN utiliza la expresión regular "Over-The-Top Validation" publicada en el artículo
-["Validating Social Security Numbers through Regular Expressions"](http://rion.io/2013/09/10/validating-social-security-numbers-through-regular-expressions-2/) de Rion Williams.
-
-* [Ver código fuente](src/main/com/ignaciosandoval/utils/ssn/SocialSecurityNumber.java).
-* [Ver javadoc](https://iasandoval.github.io/nacho-utils/com/ignaciosandoval/utils/ssn/SocialSecurityNumber.html).
-
-
-**Ejemplo:**
-```java
-    SocialSecurityNumber ssn = new SocialSecurityNumber(52063811);
-    System.out.println(ssn.toString());
-```
-**Resultando en:**
-```
-    SocialSecurityNumber{
-        ssn=52063811
-        isValid=true
-        rawSSN=52063811
-        stringSSN=052063811
-        formattedSSN=052-06-3811
-        maskedSSN=XXX-XX-3811
-    }
-```
-
 ## Security Utils
 
 Read in [English](README.md#security-utils).
@@ -97,7 +8,7 @@ Read in [English](README.md#security-utils).
 * La Clase y la implementación has sido actualizada para permitir el Cifrado de texto y archivos.
 * Ahora utiliza la transformación "Advanced Encryption Standard using the Galois/Counter Mode and No Padding" (AES/GCM/NoPadding).
 
-* [Ver código fuente](src/main/com/ignaciosandoval/utils/security/EncryptUtil.java).
+* [Ver código fuente](EncryptUtil.java).
 * [Ver javadoc](https://iasandoval.github.io/nacho-utils/com/ignaciosandoval/utils/security/EncryptUtil.html).
 
 **Ejemplo 1: Cifrado de texto**
@@ -121,7 +32,7 @@ Read in [English](README.md#security-utils).
 
 **Ejemplo 2: Cifrar archivos**
 
-**Nota:** Puedes pasar el mismo archivo para cifrarlo, pero este ejemplo muestra como un archivo es cifrado, manteniendo 
+**Nota:** Puedes pasar el mismo archivo para cifrarlo, pero este ejemplo muestra como un archivo es cifrado, manteniendo
 el archivo original y creando dos archivos nuevos: encriptado y desencriptado respectivamente.
 
 ```java
@@ -184,12 +95,12 @@ Es de utilidad, si la intención es la de realizar algo personalizado con los da
 ```java
     // Cifra el texto "nacho" con la llave "secret"
     byte[] encrypted = new EncryptUtil("secret").encrypt("nacho").getBytes();
-    
-    // Desencripta el texto con la llave "secret"
-    byte[] decrypted = new EncryptUtil("secret").decrypt(encrypted).getBytes();
-    
-    System.out.println("Encrypted Data: " + encrypted);
-    System.out.println("Decrypted Data: " + decrypted);
+
+            // Desencripta el texto con la llave "secret"
+            byte[] decrypted = new EncryptUtil("secret").decrypt(encrypted).getBytes();
+
+            System.out.println("Encrypted Data: " + encrypted);
+            System.out.println("Decrypted Data: " + decrypted);
 ```
 
 **Ejemplo 4 - Resultado:**

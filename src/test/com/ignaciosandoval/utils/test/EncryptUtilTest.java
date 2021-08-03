@@ -1,15 +1,13 @@
-package mx.com.nacho.utils.test;
+package com.ignaciosandoval.utils.test;
 
-import mx.com.nacho.utils.EncryptUtil;
-import mx.com.nacho.utils.EncryptUtilException;
+import com.ignaciosandoval.utils.security.EncryptUtil;
+import com.ignaciosandoval.utils.security.EncryptUtilException;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.util.Iterator;
-import java.util.List;
 
 public class EncryptUtilTest {
 

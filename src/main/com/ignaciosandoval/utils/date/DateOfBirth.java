@@ -1,4 +1,4 @@
-package mx.com.nacho.utils;
+package com.ignaciosandoval.utils.date;
 
 import java.sql.Timestamp;
 import java.time.DayOfWeek;
