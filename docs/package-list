@@ -1,3 +1,8 @@
+com.ignaciosandoval.utils.curp
+com.ignaciosandoval.utils.curp.builder
+com.ignaciosandoval.utils.curp.datos
+com.ignaciosandoval.utils.curp.datos.vo
+com.ignaciosandoval.utils.curp.validador
 com.ignaciosandoval.utils.date
 com.ignaciosandoval.utils.security
 com.ignaciosandoval.utils.ssn
