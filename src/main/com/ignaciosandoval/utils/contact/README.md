@@ -18,17 +18,17 @@ Leer en [Español](README_ES.md#contact-utils).
 ```
 
 **Result:**
-```json
+```json lines
     EmailAddress: {
-        value: 'NACHO@nacho.com',
-        formatted: 'nacho@nacho.com',
-        userName: 'nacho',
-        domain: 'nacho.com',
-        masked: 'na***@nacho.com',
+        value: "NACHO@nacho.com",
+        formatted: "nacho@nacho.com",
+        userName: "nacho",
+        domain: "nacho.com",
+        masked: "na***@nacho.com",
         verified: false,
         isEmpty: false,
         isValid: true,
-        type: 'EmailAddress'
+        type: "EmailAddress"
     }
 ```
 
@@ -48,15 +48,15 @@ Leer en [Español](README_ES.md#contact-utils).
 ```
 
 **Result:**
-```json
+```json lines
     PhoneNumber: {
-        value: '1234567890',
-        formatted: '(123) 456-7890',
-        areaCode: '123',
-        masked: '(***) ***-7890',
+        value: "1234567890",
+        formatted: "(123) 456-7890",
+        areaCode: "123",
+        masked: "(***) ***-7890",
         verified: false,
         isEmpty: false,
         isValid: true,
-        type: 'PhoneNumber'
+        type: "PhoneNumber"
     }
 ```

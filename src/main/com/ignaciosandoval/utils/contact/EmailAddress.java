@@ -176,15 +176,15 @@ public class EmailAddress implements ContactMethod {
     @Override
     public String toString() {
         return "EmailAddress: {" +
-                "\n\tvalue: '" + this.getValue() + "'," +
-                "\n\tformatted: '" + this.getFormatted() + "'," +
-                "\n\tuserName: '" + this.getUserName() + "'," +
-                "\n\tdomain: '" + this.getDomain() + "'," +
-                "\n\tmasked: '" + this.getMasked() + "'," +
+                "\n\tvalue: \"" + this.getValue() + "\"," +
+                "\n\tformatted: \"" + this.getFormatted() + "\"," +
+                "\n\tuserName: \"" + this.getUserName() + "\"," +
+                "\n\tdomain: \"" + this.getDomain() + "\"," +
+                "\n\tmasked: \"" + this.getMasked() + "\"," +
                 "\n\tverified: " + this.isVerified() + "," +
                 "\n\tisEmpty: " + this.isEmpty() + "," +
                 "\n\tisValid: " + this.isValid() + "," +
-                "\n\ttype: '" + this.getType() + "'" +
+                "\n\ttype: \"" + this.getType() + "\"" +
                 "\n}";
     }
 }

@@ -172,14 +172,14 @@ public class PhoneNumber implements ContactMethod {
     @Override
     public String toString() {
         return "PhoneNumber: {" +
-                "\n\tvalue: '" + this.getValue() + "'," +
-                "\n\tformatted: '" + this.getFormatted() + "'," +
-                "\n\tareaCode: '" + this.getAreaCode() + "'," +
-                "\n\tmasked: '" + this.getMasked() + "'," +
+                "\n\tvalue: \"" + this.getValue() + "\"," +
+                "\n\tformatted: \"" + this.getFormatted() + "\"," +
+                "\n\tareaCode: \"" + this.getAreaCode() + "\"," +
+                "\n\tmasked: \"" + this.getMasked() + "\"," +
                 "\n\tverified: " + this.isVerified() + "," +
                 "\n\tisEmpty: " + this.isEmpty() + "," +
                 "\n\tisValid: " + this.isValid() + "," +
-                "\n\ttype: '" + this.getType() + "'" +
+                "\n\ttype: \"" + this.getType() + "\"" +
                 "\n}";
     }
 }
