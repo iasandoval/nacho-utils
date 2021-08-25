@@ -16,6 +16,7 @@ Iré actualizando este proyecto poco a poco en mi tiempo libre.
 2. [Social Security Number](#social-security-number).
 3. [Encrypt Util](#encrypt-util).
 4. [CURP Utils](#curp-utils).
+5. [Contact Utils](#contact-utils). ** NEW **
 
 ## Date Utils
 
